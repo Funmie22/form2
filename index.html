@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="multiStepForm">
+        <div class="progress-bar">
+            <div class="step" id="step1">1</div>
+            <div class="step" id="step2">2</div>
+            <div class="step" id="step3">3</div>
+        </div>
+
+        <div class="step-content" id="step1-content">
+            <h2>User Information</h2>
+            <label for="first-name">Enter Your First Name:</label>
+            <input id="first-name" name="first-name" type="text" required>
+            <span class="error-message" id="first-name-error"></span>
+
+            <label for="last-name">Enter Your Last Name:</label>
+            <input id="last-name" name="last-name" type="text" required>
+            <span class="error-message" id="last-name-error"></span>
+
+            <label for="email">Enter Your Email:</label>
+            <input id="email" name="email" type="email" required>
+            <span class="error-message" id="email-error"></span>
+
+            <label for="phone-number">Enter your phone number:</label>
+            <input id="phone-number" name="phone-number" type="tel" required>
+            <span class="error-message" id="phone-number-error"></span>
+        </div>
+
+        <div class="step-content" id="step2-content">
+            <h2>Address Information</h2>
+            <label for="address">Street Address:</label>
+            <input id="address" name="address" type="text" required>
+            <span class="error-message" id="address-error"></span>
+
+            <label for="city">City:</label>
+            <input id="city" name="city" type="text" required>
+            <span class="error-message" id="city-error"></span>
+
+            <label for="zip-code">Enter your zip-code:</label>
+            <input id="zip-code" name="zip-code" type="text" required>
+            <span class="error-message" id="zip-code-error"></span>
+        </div>
+
+        <div class="step-content" id="step3-content">
+            <h2>Payment Information</h2>
+            <label for="credit-card-number">Enter your credit card number:</label>
+            <input id="credit-card-number" name="credit-card-number" type="text" required>
+            <span class="error-message" id="credit-card-number-error"></span>
+
+            <label for="expiration-date">Enter the expiration date:</label>
+            <input id="expiration-date" name="expiration-date" type="date" required>
+            <span class="error-message" id="expiration-date-error"></span>
+
+            <label for="cvv">CVV:</label>
+            <input id="cvv" name="cvv" type="text" required>
+            <span class="error-message" id="cvv-error"></span>
+        </div>
+
+        <div class="step-content" id="step4-content">
+            <div class="container">
+                <h2>Upload Images</h2>
+                <label for="fileUpload">Select Images:</label>
+                <input id="fileUpload" name="fileUpload" type="file" accept="image/jpeg, image/png" multiple>
+                <div id="thumbnails"></div>
+                <div id="fileError" class="error-message"></div>
+                <button type="button" id="uploadButton">Upload</button>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button type="button" id="prevButton" onclick="showPrevStep()">Prev</button>
+            <button type="button" id="nextButton" onclick="showNextStep()">Next</button>
+            <button type="submit" id="submitButton">Submit</button>
+        </div>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
